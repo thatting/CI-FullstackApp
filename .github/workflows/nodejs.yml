@@ -19,7 +19,7 @@ jobs:
       # Check out the code from the repository.
       - name: Checkout code
         uses: actions/checkout@v3
-        
+
       # Set up a Node.js environment using the specified node version.
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -32,7 +32,7 @@ jobs:
 
       # Run the tests.
       - name: Run tests
-        run: npm backend && npm test
+        run: cd backend && npm test
 
       # Run the linter.
       - name: Run linter
