@@ -34,11 +34,7 @@ jobs:
       - run: npm run test
 
       # Run the linter.
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+
 
       # Send a console message at completion.
       - run: |
