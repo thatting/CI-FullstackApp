@@ -35,7 +35,8 @@ jobs:
       - name: Run tests
         run: cd backend && npm test
 
-
+      # Create ESLint configuration file.
+      - run: cd backend && npx eslint --init
 
       # Run the linter.
       - name: Run linters
