@@ -37,13 +37,8 @@ jobs:
       - name: Run tests
         run: cd backend && npm test
 
-      - run: cd backend && npx eslint --init
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+      # Run the linter.
+      - run: cd backend && npm run lint
 
       # Send a console message at completion.
       - run: |
