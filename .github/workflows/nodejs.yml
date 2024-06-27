@@ -37,8 +37,10 @@ jobs:
 
       # Run the linter.
       - name: Run linters
-        uses: wearerequired/lint-action@v2
+        uses: wearerequired/lint-action@v1
         with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
           eslint: true
           prettier: true
 
