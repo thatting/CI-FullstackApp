@@ -14,29 +14,29 @@ jobs:
     strategy:
       matrix:
         node-version: [16, 18]
-        platform: ubuntu-latest
-      fail-fast: false 
 
     steps:
       # Check out the code from the repository.
       - name: Checkout code
         uses: actions/checkout@v3
+        
       # Set up a Node.js environment using the specified node version.
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Install the dependencies.
+      # Install the dependencies
       - name: Install dependencies
-        run: npm install
+        run: cd backend && npm ci
 
       # Run the tests.
       - name: Run tests
-        run: npm test
+        run: npm backend && npm test
 
       # Run the linter.
-
+      - name: Run linter
+        run: cd backend && npm run lint
 
       # Send a console message at completion.
       - run: |
