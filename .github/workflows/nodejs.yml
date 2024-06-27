@@ -39,7 +39,6 @@ jobs:
         with:
           eslint: true
           prettier: true
-      - run: npm run linters
 
       # Send a console message at completion.
       - run: |
