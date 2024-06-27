@@ -37,7 +37,7 @@ jobs:
 
       # Run the linter.
       - name: Generate linter config file 
-        run: npm init @eslint/config
+        run: npm init 
 
       - name: Run linters
         run: cd backend && npm run lint
