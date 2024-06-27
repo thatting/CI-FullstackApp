@@ -38,7 +38,10 @@ jobs:
         run: cd backend && npm test
 
       - name: Run linters
-        run: cd frontend && npm run lint
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
 
       # Send a console message at completion.
       - run: |
