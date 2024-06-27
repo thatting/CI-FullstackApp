@@ -1,25 +1,9 @@
-module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
+// eslint.config.js
+module.exports = [
+    {
+        rules: {
+            semi: "error",
+            "prefer-const": "error"
         }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {
     }
-}
+];
